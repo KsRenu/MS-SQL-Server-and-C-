@@ -1,0 +1,62 @@
+Last login: Wed Jan 11 12:55:44 on ttys000
+(base) Renu@Kishores-MBP ~ % sudo docker pull mcr.microsoft.com/mssql/server:2022-latest
+Password:
+2023/01/11 14:46:16 must use ASL logging (which requires CGO) if running as root
+2022-latest: Pulling from mssql/server
+342d87d17479: Pull complete 
+112c1458d0bd: Pull complete 
+04016b3a8e25: Pull complete 
+Digest: sha256:7c61aeefa1c8eb55bccfa8d536a283ec922c486c7688e51f193b84c5f0aa3768
+Status: Downloaded newer image for mcr.microsoft.com/mssql/server:2022-latest
+mcr.microsoft.com/mssql/server:2022-latest
+(base) Renu@Kishores-MBP ~ % docker run -e "ACCEPT_EULA=1" -e "MSSQL_SA_PASSWORD=reallyStrongPwd123" -e "MSSQL_PID=Developer" -e "MSSQL_USER=SA" -p 1433:1433 -d --name=sql mcr.microsoft.com/azure-sql-edge
+Unable to find image 'mcr.microsoft.com/azure-sql-edge:latest' locally
+latest: Pulling from azure-sql-edge
+8376114ff9b3: Pull complete 
+bb3f6db1ca73: Pull complete 
+983f61788a4a: Pull complete 
+9a0d43969798: Pull complete 
+bba183e85bbe: Pull complete 
+df8f8eb18a6e: Pull complete 
+395f36ad668e: Pull complete 
+d4e475881410: Pull complete 
+3c39c3626fb8: Pull complete 
+43febce9b640: Pull complete 
+388e5d56d261: Pull complete 
+Digest: sha256:dfce05471e259d330e00bc9e66904254d75b714b35edc81495b4faee4a2dba96
+Status: Downloaded newer image for mcr.microsoft.com/azure-sql-edge:latest
+75c36e8b013ff1f1f788d32285f28b2ecdfb1d0c6dee5b62a1ada553eb12716c
+(base) Renu@Kishores-MBP ~ % docker ps
+CONTAINER ID   IMAGE                              COMMAND                  CREATED              STATUS              PORTS                              NAMES
+75c36e8b013f   mcr.microsoft.com/azure-sql-edge   "/opt/mssql/bin/perm…"   About a minute ago   Up About a minute   1401/tcp, 0.0.0.0:1433->1433/tcp   sql
+(base) Renu@Kishores-MBP ~ % sudo npm install -g sql-cli
+Password:
+npm WARN deprecated sprintf@0.1.5: The sprintf package is deprecated in favor of sprintf-js.
+npm WARN deprecated core-js@1.2.7: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
+
+changed 48 packages, and audited 49 packages in 6s
+
+2 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+(base) Renu@Kishores-MBP ~ % mssql -u sa -p reallyStrongPwd123
+Connecting to localhost...done
+
+sql-cli version 0.6.2
+Enter ".help" for usage hints.
+mssql> select @@version
+                                                                                                                                                                         
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Microsoft Azure SQL Edge Developer (RTM) - 15.0.2000.1565 (ARM64) 
+	Jun 14 2022 00:37:12 
+	Copyright (C) 2019 Microsoft Corporation
+	Linux (Ubuntu 18.04.6 LTS aarch64) <ARM64>
+
+1 row(s) returned
+
+Executed in 1 ms
+mssql> 
+
+
+
