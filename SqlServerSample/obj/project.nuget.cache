@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ian04ZbMQc+27YpNI977nHBTqvYNzWDirl7POHna2yvE/JjiuonD9ia1DFHKbmHT3OncL6haE+MUBtCwQU7Zkg==",
+  "dgSpecHash": "khlbAwdWvs7Nw/wEDPCwHyNYBNkKWpfh9Anf9Cn0OvG8vOBuhyaSsEdkRyGxmxI2yccNjhS4RGECUJALvhYTKw==",
   "success": true,
-  "projectFilePath": "/Users/Renu/Desktop/Desktop Data/GitHub/MS-SQL-Server-and-C-/SqlServerSample/SqlServerSample.csproj",
+  "projectFilePath": "/Users/Renu/Desktop/GitHub/MS-SQL-Server-and-C-/SqlServerSample/SqlServerSample.csproj",
   "expectedPackageFiles": [
     "/Users/Renu/.nuget/packages/microsoft.netcore.platforms/2.0.0/microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "/Users/Renu/.nuget/packages/microsoft.win32.registry/4.4.0/microsoft.win32.registry.4.4.0.nupkg.sha512",

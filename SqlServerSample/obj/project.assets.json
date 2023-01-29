@@ -499,11 +499,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Renu/Desktop/Desktop Data/GitHub/MS-SQL-Server-and-C-/SqlServerSample/SqlServerSample.csproj",
+      "projectUniqueName": "/Users/Renu/Desktop/GitHub/MS-SQL-Server-and-C-/SqlServerSample/SqlServerSample.csproj",
       "projectName": "SqlServerSample",
-      "projectPath": "/Users/Renu/Desktop/Desktop Data/GitHub/MS-SQL-Server-and-C-/SqlServerSample/SqlServerSample.csproj",
+      "projectPath": "/Users/Renu/Desktop/GitHub/MS-SQL-Server-and-C-/SqlServerSample/SqlServerSample.csproj",
       "packagesPath": "/Users/Renu/.nuget/packages/",
-      "outputPath": "/Users/Renu/Desktop/Desktop Data/GitHub/MS-SQL-Server-and-C-/SqlServerSample/obj/",
+      "outputPath": "/Users/Renu/Desktop/GitHub/MS-SQL-Server-and-C-/SqlServerSample/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/Renu/.nuget/NuGet/NuGet.Config"
