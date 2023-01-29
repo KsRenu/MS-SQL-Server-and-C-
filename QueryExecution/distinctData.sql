@@ -1,0 +1,1 @@
+select DISTINCT first_name from sample;
